@@ -1,4 +1,4 @@
-package org.example;
+package com.Yskye.work2;
 
 import java.util.Scanner;
 

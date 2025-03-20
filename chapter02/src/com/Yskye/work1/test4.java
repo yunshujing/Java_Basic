@@ -1,4 +1,4 @@
-package org.example;
+package com.Yskye.work1;
 
 public class test4 {
     public static void main(String[] args) {
