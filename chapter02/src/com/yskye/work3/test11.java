@@ -1,4 +1,4 @@
-package com.Yskye.work3;
+package com.yskye.work3;
 
 public class test11 {
     public static void main(String[] args) {
@@ -18,7 +18,7 @@ public class test11 {
         // 打印杨辉三角形
         for (int i = 0; i < n; i++) {
             for (int j = 0; j <= i; j++) {
-                System.out.print(yh[i][j] + " ");
+                System.out.print(yh[i][j] + "  ");
             }
             System.out.println();
         }

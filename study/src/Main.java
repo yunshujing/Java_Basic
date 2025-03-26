@@ -11,7 +11,8 @@ public class Main {
 //        }
 //        for (int i = 0; i < n; i++) {
 //            System.out.println(a[i]);
-//        }
+//
+//        -------------------------------------
         //假设班级有8名学生，请帮我开发程序可以录入8名学生的Java成绩，
         //成绩类型是小数，并输出平均分，最高分和最低分
 //        int n = 8;
@@ -36,5 +37,6 @@ public class Main {
         System.out.println(sum / n);
         System.out.println(max);
         System.out.println(min);
+
     }
 }
