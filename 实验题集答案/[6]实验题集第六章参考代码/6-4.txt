@@ -1,0 +1,73 @@
+import java.awt.Container;
+import java.awt.FlowLayout;
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
+
+
+import javax.swing.*;
+import java.awt.*;
+public class example08  extends JFrame implements ActionListener{	
+	JButton jb1 =new JButton("红色");
+	JButton jb2 =new JButton("绿色");
+	JButton jb3 =new JButton("蓝色");
+	int r=0,g=0,b=0;
+	Container con = this.getContentPane();
+	JLabel j1 = new JLabel("三原色值为："+r+","+g+","+b);
+	JPanel jp=new JPanel();
+	public example08() {
+		super("点击按钮调节面板颜色");
+		this.setSize(320, 240);
+		this.setLocation(220, 160);
+		
+		con.setLayout(null);
+		j1.setSize(2220, 240);
+		j1.setLocation(120, 150);
+		j1.setForeground(Color.PINK);
+		con.add(j1);
+		con.add(jb1);
+		jb1.setBackground(Color.RED);
+		jb1.setBounds(20,80,80,40);
+		con.add(jb2);
+		jb2.setBackground(Color.GREEN);
+		jb2.setBounds(120,80,80,40);
+		con.add(jb3);
+		jb3.setBackground(Color.BLUE);
+		jb3.setBounds(220,80,80,40);
+		jb1.addActionListener(this);
+		jb2.addActionListener(this);
+		jb3.addActionListener(this);
+	}	
+				
+		public void actionPerformed(ActionEvent e) {
+			if(e.getSource()==jb1)
+			{
+				r+=10;
+				if(r>255)r=0;
+				con.setBackground(new Color(r,g,b));
+			}
+			if(e.getSource()==jb2)
+			{
+				g+=10;
+				if(g>255)
+					g=0;
+				con.setBackground(new Color(r,g,b));
+			}
+			if(e.getSource()==jb3)
+			{
+				b+=10;
+				if(b>255)
+					b=0;
+				con.setBackground(new Color(r,g,b));
+			}
+		}
+		
+	
+	public static void main(String[] args) {
+		example08 jf = new example08();
+		jf.setVisible(true);
+	}
+}
+
+
+//this.getContentPane()的作用是初始化一个容器，用来在容器上添加一些控件。
+this就是默认调用所定义类的实例化对象。
